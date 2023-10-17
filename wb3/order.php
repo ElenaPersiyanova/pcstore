@@ -10,6 +10,7 @@
 </head>
 <body>
 <header>
+  <!-- Шапка страницы -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.html">
         <img src="img/logo.png" width="50%" height="50%" class="d-inline-block align-top" alt="Логотип" ">
@@ -35,7 +36,7 @@
     </div>
 </nav>
   </header>
-
+<!-- Форма для оформления заказа -->
   <div class="container">
     <div class="row">
       <div class="col-md-6 mx-auto">
@@ -80,17 +81,18 @@
       </div>
     </div>
   </div>
+  <!-- Футер -->
   <footer class="footer py-3 bg-dark text-light text-center" >
     <div class="container">
       <p>&copy; Интернет-магазин PC STORE. Сделала студентка Елена Персиянова.</p>
     </div>
   </footer>
-
+<!-- Script bootstrap -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
+<!-- Рассчет суммы товара с условием if quantiti(количество) > 1 то скидка 10% -->
   <script>
     $(document).ready(function() {
       var productPrice = {
