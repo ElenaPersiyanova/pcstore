@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ff6347;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    .contact-info {
+      padding: 40px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      margin-top: 40px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #ff6347;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff4633;
+    }
+
+    .contact-form .message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+	
+	 .footer {
+      background-color: #fff;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+  
+</head>
+<body style="background-color: rgb(119, 136, 153);">
+  <!-- Шапка сайта -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" width="50%" height="50%" class="d-inline-block align-top" alt="Логотип" ">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="order.php">Оформление заказа</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">О нас</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+  </header>
+
+  <!-- Контент страницы - информация о компании -->
+  
+  <body>
+  <h1>Контакты</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <h2>Наши контакты</h2>
+          <p><strong>Телефон:</strong> +7 123 456-7890</p>
+          <p><strong>Email:</strong> info@example.com</p>
+          <p><strong>Адрес:</strong> г. Москва, ул. Пушкина, д.10</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <form class="contact-form" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Имя">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="message" placeholder="Ваше сообщение"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </div>
+          <div class="message hidden" id="message-container"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+
+      var nameInput = document.getElementById('name');
+      var emailInput = document.getElementById('email');
+      var messageInput = document.getElementById('message');
+      var messageContainer = document.getElementById('message-container');
+
+      // Проверка на введенные данные
+      if (nameInput.value === '' || emailInput.value === '' || messageInput.value === '') {
+        messageContainer.textContent = 'Пожалуйста, заполните все поля';
+        messageContainer.className = 'message text-danger';
+        return;
+      }
+
+      // Здесь можно добавить логику для отправки формы на сервер
+
+      // Очистка полей и отображение сообщения об успешной отправке
+      nameInput.value = '';
+      emailInput.value = '';
+      messageInput.value = '';
+      messageContainer.textContent = 'Благодарим за уделенное время, мы овтетим Вам по e-mail';
+      messageContainer.className = 'message text-success';
+    }
+  </script>
+  <!-- Футер сайта -->
+  <footer class="footer py-3 bg-dark text-light text-center" >
+    <div class="container">
+      <p>&copy; Интернет-магазин PC STORE. Сделала студентка Елена Персиянова.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

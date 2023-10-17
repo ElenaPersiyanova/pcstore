@@ -1,0 +1,30 @@
+ body {
+      background-color: rgb(119, 136, 153);
+    }
+    .header {
+      background-color: #fff;
+      padding: 20px;
+    }
+    .footer {
+      background-color: #fff;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .product {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+	  .form-section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+	.img-circleblock{
+     display: inline-block;
+
+    }
