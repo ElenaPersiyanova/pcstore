@@ -1,3 +1,5 @@
+
+// Скрипт для нормального отображения картинок товаров
 // Получаем все элементы с классом .product-image
 const productImages = document.querySelectorAll('.product-image');
 
